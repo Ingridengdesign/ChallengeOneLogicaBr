@@ -3,7 +3,11 @@ let saida = document.querySelector("#output");
 let criptografar = document.querySelector("#crypto");
 let descriptografar = document.querySelector("#decryption");
 let copiar = document.querySelector("#copy");
-const regex = new RegExp('^[a-z 0-9\b]')
+var check
+var erro = document.querySelector("#erro");
+
+const regex = new RegExp('^[a-z\b]')
+
 
 criptografar.addEventListener("click", event => {
   event.preventDefault()
