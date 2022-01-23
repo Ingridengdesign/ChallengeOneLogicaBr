@@ -55,7 +55,7 @@ function descriptografa(texto) {
 
 function caracteres(testeTexto) {
   if (!regex.test(testeTexto)) {
-    return 'ATENÇÃO: Você precisa digitar frases com apenas letras minúsculas e sem acento para continuar.'
+    return "A MENSAGEM NÃO DEVE CONTER LETRAS MAIÚSCULAS OU ACENTOS"
   } else {
     return testeTexto
   }
