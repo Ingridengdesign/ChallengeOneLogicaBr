@@ -6,32 +6,72 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Decodificador</title>
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--CSS-->
   <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
+
 <body>
-  <h1 class="title">código secreto</h1>
-  <main>
-    <section>
+  <header>
+    <div class="col col-xl-1"><img id="logo" src="./img/alura_logo.svg" alt="Alura Logo">
+    </div>
+  </header>
+
+  <!--<h1 class="title">código secreto</h1>-->
+  <main class="my-container">
+    <section class="my-container-box">
       <form action="">
-        <label for="input-texto">Apenas letras minúsculas, sem acento</label>
-        <textarea class="text-input" name="input-texto" id="input" placeholder="insira o texto aqui">
+        <label for="input-texto" placeholder="Digite seu texto" class="label-texto">
+        </label>
+        <textarea class="text-input" name="input-texto" id="input" placeholder="Digite seu texto" rows="10">
         </textarea>
-        <button class="btn" id="crypto">Criptografar</button>
-        <button class="btn" id="decryption">Descriptografar</button>
+
+        <div class="btn-alert">
+          <img src="./img/alert.svg" alt="Alerta" width="16px">
+
+          <p> Apenas letras minúsculas e sem acento.</p>
+        </div>
+
+        <div class="btn-space">
+          <button class="btn-a btn btn-primary" id="crypto">
+            Criptografar
+          </button>
+          <button class="btn-a btn btn-secondary" id="decryption">
+            Descriptografar
+          </button>
+        </div>
       </form>
     </section>
+    <span></span>
 
-    <section>
-      <h2 id=" "> Mensagem criptografada</h2>
-      <textarea class="text-input" name="" id="output"></textarea>
-      <button class="btn" id="copy">Copiar</button>
-      <div id="erro"></div>
+    <section class="my-container-box output">
+      <h2 id=" ">
+      </h2>
+      <div class="output">
+        <textarea class="text-input" name="" id="output" rows="10" placeholder="Mensagem criptografada" readonly></textarea>
+        <br>
+        <div class="btn-space justify-content-md-center">
+          <button class="btn-a btn btn-outline-primary " id="copy">Copiar</button>
+        </div>
+        <div id="erro"></div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <a href="https://github.com/ingridengdesign" target="blank">Desenvolvido por Ingrid Emanuelle</a>
+  <footer class="row justify-content-center text-center">
+    <a href="https://github.com/ingridengdesign" target="blank">
+      <h5>
+        Desenvolvido por Ingrid Emanuelle</h5>
+    </a>
 
   </footer>
   <script src="js/script.js">
