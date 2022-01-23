@@ -14,18 +14,19 @@
   <main>
     <section>
       <form action="">
-        <label for="input-text">Apenas letras minúsculas, sem acento</label>
+        <label for="input-texto">Apenas letras minúsculas, sem acento</label>
         <textarea class="text-input" name="input-texto" id="input" placeholder="insira o texto aqui">
         </textarea>
-        <button id="crypto">Criptografar</button>
-        <button id="decryption">Descriptografar</button>
+        <button class="btn" id="crypto">Criptografar</button>
+        <button class="btn" id="decryption">Descriptografar</button>
       </form>
     </section>
 
     <section>
-      <h2> Mensagem criptografada</h2>
-      <textarea name="" id="output"></textarea>
-      <button id="copy">Copiar</button>
+      <h2 id=" "> Mensagem criptografada</h2>
+      <textarea class="text-input" name="" id="output"></textarea>
+      <button class="btn" id="copy">Copiar</button>
+      <div id="erro"></div>
     </section>
   </main>
 
@@ -33,7 +34,7 @@
     <a href="https://github.com/ingridengdesign" target="blank">Desenvolvido por Ingrid Emanuelle</a>
 
   </footer>
-  <script src=".js/script.js">
+  <script src="js/script.js">
   </script>
 </body>
 
