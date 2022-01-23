@@ -3,17 +3,27 @@ let saida = document.querySelector("#output");
 let criptografar = document.querySelector("#crypto");
 let descriptografar = document.querySelector("#decryption");
 let copiar = document.querySelector("#copy");
+const regex = new RegExp('^[a-z 0-9\b]')
 
 criptografar.addEventListener("click", event => {
   event.preventDefault()
-  resultado.textContent = caracteres(criptografa(texto.value))
+  saida.textContent = caracteres(criptografa(texto.value))
   texto.value = " "
 })
 
 descriptografar.addEventListener("click", event => {
   event.preventDefault()
-  resultado.textContent = caracteres(descriptografa(texto.value))
+  saida.textContent = caracteres(descriptografa(texto.value))
   texto.value = " "
+})
+
+copiar.addEventListener("click", event => {
+  event.preventDefault()
+
+  saida.select()
+
+  document.execCommand("copy")
+  texto.value = ''
 })
 
 function criptografa(texto) {
@@ -37,4 +47,12 @@ function descriptografa(texto) {
     .replace(/ufat/gi, 'u')
 
   return textoDescriptografado
+}
+
+function caracteres(testeTexto) {
+  if (!regex.test(testeTexto)) {
+    return 'ATENÇÃO: Você precisa digitar frases com apenas letras minúsculas e sem acento para continuar.'
+  } else {
+    return testeTexto
+  }
 }
